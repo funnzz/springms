@@ -1,20 +1,21 @@
 package my.homeprojects.springms.entities;
 
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
-@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
+@Table(name = "PERSON")
 public class Person {
 
     @Id
-    @Column(name = "person_id")
-    private Integer person_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long person_id;
     @Column(name = "first_name")
     private String firstName;
     @Column(name = "last_name")

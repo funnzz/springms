@@ -8,6 +8,9 @@ public class SpringmsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringmsApplication.class, args);
+
+		System.out.println("### APP STARTED ###");
+
 	}
 
 }
